@@ -6,7 +6,6 @@ import {
 } from 'react-bootstrap';
 
 class App extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -75,34 +74,47 @@ class App extends React.Component {
   }
 
   showAbout() {
-    this.setState({ showAbout: true })
+    this.setState({ showAbout: true });
   }
 
   render() {
     let msgContainer = '';
-    const { message, author, imgStyle, showAbout } = this.state;
+    const {
+      message, author, imgStyle, showAbout,
+    } = this.state;
     const msgBlock = (
-      <blockquote className="blockquote text-center" style={{fontSize: "2.5em"}}>
+      <blockquote
+        className="blockquote text-center"
+        style={{ fontSize: '2.5em' }}
+      >
         <p className="mb-0">{message}</p>
         <footer className="blockquote-footer">{author}</footer>
       </blockquote>
     );
     const aboutBlock = (
       <div>
-      <h1>What is this?</h1>
-      <p>
-        Inspiration q.o.d. (quote of the day) is a small site setup to give a bit
-        of daily inspiration.  Each day a random quote is shown as the quote of the day
-        along with a random image as the image of the day.  You can get a new quote
-        by clicking on the "Get a new quote" button.
-      </p>
-      <p>
-        We hope you enjoy the site and find inspiration on your journey!
-      </p>
-      <p>
-        All quotes are from the <a href="https://zenquotes.io/">Zen Quotes API</a><br />
-        Questions or comments?  Contact us - <a href="mailto:admin@inspirationqod.com">admin@inspirationqod.com</a>
-      </p>
+        <h1>What is this?</h1>
+        <p>
+          Inspiration q.o.d. (quote of the day) is a small
+          site setup to give a bit
+          of daily inspiration.  Each day a random quote is
+          shown as the quote of the day
+          along with a random image as the image of the day.
+          You can get a new quote
+          by clicking on the &quot;Get a new quote&quot; button.
+        </p>
+        <p>
+          We hope you enjoy the site and find inspiration on your journey!
+        </p>
+        <p>
+          All quotes are from the
+          {' '}
+          <a href="https://zenquotes.io/">Zen Quotes API</a>
+          <br />
+          Questions or comments?  Contact us -
+          {' '}
+          <a href="mailto:admin@inspirationqod.com">admin@inspirationqod.com</a>
+        </p>
       </div>
     );
 
@@ -119,16 +131,14 @@ class App extends React.Component {
               <Col>
                 <Navbar className="link-white">
                   <Navbar.Brand className="logo">
-                    <a href="#" onClick={this.getMod}>
-                      <img
-                        style={{maxWidth: 50}}
-                        alt="logo"
-                        src="http://localhost:3000/images/inspirationqodlogo.png"
-                      />
-                      <span className="d-none d-sm-inline ml-5">
-                        Inspiration q.o.d.
-                      </span>
-                    </a>
+                    <img
+                      style={{ maxWidth: 50 }}
+                      alt="logo"
+                      src="http://localhost:3000/images/inspirationlogo.png"
+                    />
+                    <span className="d-none d-sm-inline ml-5">
+                      Inspiration q.o.d.
+                    </span>
                   </Navbar.Brand>
                   <Nav className="ml-auto">
                     <Button
@@ -173,7 +183,5 @@ class App extends React.Component {
 }
 // <div className="img" style={this.imageStyle()}>
 // </div>
-
-
 
 export default App;
