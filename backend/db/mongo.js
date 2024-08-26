@@ -3,7 +3,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const url = process.env.MONGO_CON_STR;
-console.log(url);
 
 var _db;
 var _client;

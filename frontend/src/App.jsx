@@ -31,11 +31,11 @@ class App extends React.Component {
   }
 
   getRandomMessage() {
-    this.getMessage('http://localhost:3000/api/randomquote');
+    this.getMessage('https://node.inspirationqod.com/api/randomquote');
   }
 
   getMod() {
-    this.getMessage('http://localhost:3000/api/qod');
+    this.getMessage('https://node.inspirationqod.com/api/qod');
   }
 
   getMessage(url) {
@@ -56,7 +56,7 @@ class App extends React.Component {
   }
 
   getImage() {
-    fetch('http://localhost:3000/api/iod', {
+    fetch('https://node.inspirationqod.com/api/iod', {
       mode: 'cors',
       headers: {
         'Access-Control-Allow-Origin': '*',
@@ -67,7 +67,7 @@ class App extends React.Component {
         this.setState((state) => {
           const imgStyle = { ...state.imgStyle };
           imgStyle.backgroundImage = `
-            url(http://localhost:3000/images/${img.name})`;
+            url(https://node.inspirationqod.com/images/${img.name})`;
           return { imgStyle };
         });
       });
@@ -134,7 +134,7 @@ class App extends React.Component {
                     <img
                       style={{ maxWidth: 50 }}
                       alt="logo"
-                      src="http://localhost:3000/images/inspirationlogo.png"
+                      src="https://node.inspirationqod.com/images/inspirationqodlogo.png"
                     />
                     <span className="d-none d-sm-inline ml-5">
                       Inspiration q.o.d.
